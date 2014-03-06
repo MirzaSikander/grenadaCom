@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>go.video01</title>
+<link href="css/app5.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://releases.flowplayer.org/5.4.6/skin/minimalist.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+<link href="css/grid5.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="flowplayer-5.4.6/flowplayer.min.js"></script>
+
+<script>
+		jQuery(document).ready(function() {
+				$('video#bgvid').on("loadedmetadata", scaleVideo);
+				$(window).on("resize", scaleVideo);
+			function scaleVideo() {
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
+				var videoNativeWidth = $('video#bgvid')[0].videoWidth;
+				var videoNativeHeight = $('video#bgvid')[0].videoHeight;
+				var vScalerW = windowWidth / videoNativeWidth;
+				var vScalerH = windowHeight / videoNativeHeight;
+				if (vScalerW > vScalerH) 
+						{var scaler = vScalerW;}
+					else
+						{var scaler = vScalerH;}
+				var newVWidth = videoNativeWidth * scaler;
+				var newVHeight = videoNativeHeight * scaler;
+					$('video#bgvid').width(newVWidth);
+					$('video#bgvid').height(newVHeight);		
+				/*	<!--alert('foiur' + newVHeight );-->*/
+			}})
+</script>
+
+</head>
+
+<body>
+
+<div id="overlay"></div>
+
+<div id="panel"><img class="cent" src="img/outl.png" width="300" height="300" alt=""/> </div>
+
+<video id="bgvid" src="video/swamp.mp4" autoplay muted loop></video>
+
+<div id="grid"></div>
+<div id="cent">
+     <div class="flowplayer is-splash is-closeable" id="player4" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/balloons.mp4"></video>
+      </div>
+         
+      <div class="flowplayer is-splash is-closeable" id="player5" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/fireworks.mp4"></video>
+      </div>
+         
+      <div class="flowplayer is-splash is-closeable" id="player6" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/cotton.mp4"></video>
+      </div>
+ </div>
+<footer>
+<nav>
+<ul class ="nav">
+  <li><a href="char5.html">LOCAL<br>CHARACTERS</a></li>
+  <li><a href="arch5.html">BEAUTIFUL<br>ARCHITECTURE</a></li>
+  <li><a href="home5.html">GRENADA<br>COMMONS</a></li>
+  <li><a href="out5.html">UNIQUE<br>OUTDOORS</a></li>
+  <li><a href="about5.html">ABOUT<br>&amp; CONTACT</a></li>
+</ul>
+</nav>
+</footer>
+
+</body>
+</html>

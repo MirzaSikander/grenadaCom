@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>go.video01</title>
+<link href="css/app6.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://releases.flowplayer.org/5.4.6/skin/minimalist.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+<link href="css/grid6.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="flowplayer-5.4.6/flowplayer.min.js"></script>
+<script src="js/controls.js" type="text/javascript" charset="utf-8" async defer></script>
+<script>
+		jQuery(document).ready(function() {
+				$('video#bgvid').on("loadedmetadata", scaleVideo);
+				$(window).on("resize", scaleVideo);
+			function scaleVideo() {
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
+				var videoNativeWidth = $('video#bgvid')[0].videoWidth;
+				var videoNativeHeight = $('video#bgvid')[0].videoHeight;
+				var vScalerW = windowWidth / videoNativeWidth;
+				var vScalerH = windowHeight / videoNativeHeight;
+				if (vScalerW > vScalerH) 
+						{var scaler = vScalerW;}
+					else
+						{var scaler = vScalerH;}
+				var newVWidth = videoNativeWidth * scaler;
+				var newVHeight = videoNativeHeight * scaler;
+					$('video#bgvid').width(newVWidth);
+					$('video#bgvid').height(newVHeight);		
+				/*	<!--alert('foiur' + newVHeight );-->*/
+			}})
+</script>	
+        
+
+</head>
+
+<body>
+
+<div id="overlay"></div>
+<div id="logo"><a href="home6.html"> <img src="img/gc.png" width="121" height="119" alt="Grenada Commons"></a></div>
+
+<div id="panel">
+  <p><img class="cent" src="img/char.png" width="300" height="215" alt=""/> 
+  <div class="light">
+ “You Leave your sensitivity at the door” says George of his favorite local restaurant/hangout.   Meet the locals telling it like it is, see what the community it up to, and discover Grenada's rich history.</div></div>
+
+<div id="grid">
+</div>
+
+<video id="bgvid" src="video/characters.mp4" autoplay muted loop></video>
+
+		<div related-id="9" class="player9 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+		<div id="9" class="thumbnails flowplayer is-splash is-closeable player9" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/biscuit.mp4"></video>
+		</div>
+         
+		<div related-id="10" class="player10 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+		<div id="10" class="thumbnails flowplayer is-splash is-closeable player10" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/choir.mp4"></video>
+		</div>
+         
+		<div related-id="11" class="player11 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+		<div id="11" class="thumbnails flowplayer is-splash is-closeable player11" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/band.mp4"></video>
+		</div>
+      
+		<!-- <p class="text-overlay player12"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p> -->
+		<div related-id="12" class="player12 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+		<div id="12" class="thumbnails flowplayer is-splash is-closeable player12" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/gospel.mp4"></video>
+		</div>
+
+		<div related-id="13" class="player13 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+       <div id="13" class="thumbnails flowplayer is-splash is-closeable player13" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/bell.mp4"></video>
+		</div>
+
+		<div related-id="14" class="player14 text-cont"><p class="text-overlay"> SOMETHING SHOULD GO HERE... BUT SHOULD NOT BE LONG </p></div>
+       <div id="14" class="thumbnails flowplayer is-splash is-closeable player14" data-ratio="0.5625">
+         <video><source type="video/mp4" src="video/visions.mp4"></video>
+		</div>
+
+
+<footer>
+<nav>
+<ul class ="nav">
+  <li><a href="char6.html">LOCAL<br>CHARACTERS</a></li>
+  <li><a href="arch6.html">BEAUTIFUL<br>ARCHITECTURE</a></li>
+  <li><a href="home6.html">GRENADA<br>COMMONS</a></li>
+  <li><a href="out6.html">UNIQUE<br>OUTDOORS</a></li>
+  <li><a href="about6.html">ABOUT<br>&amp; CONTACT</a></li>
+</ul>
+</nav>
+</footer>
+
+</body>
+</html>

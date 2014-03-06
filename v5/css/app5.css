@@ -1,0 +1,139 @@
+@charset"UTF-8";
+ html, body {
+    margin: 0px;
+    font-family:'Open Sans', sans-serif;
+}
+.cent {
+    display: block;
+    margin: 0px auto;
+}
+.nav {
+    border: solid black;
+    border-width: 3px 0 0 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(52, 42, 32, 0.40);
+    color: rgba(236, 234, 181, 1.00);
+}
+.nav li {
+    display:inline;
+}
+.nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(250, 235, 150, 1.00);
+    line-height: 95%;
+}
+.nav a:hover {
+    color: rgba(255, 253, 250, 1.00);
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    z-index:6;
+    /* [disabled]background-color: rgba(169,67,69,1.00); */
+}
+video#bgvid {
+    position: fixed;
+}
+#overlay {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-image:url('../img/d.png');
+    background-repeat: repeat;
+    z-index:2;
+}
+#overlayl {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-image:url('../img/l.png');
+    background-repeat: repeat;
+    z-index:2;
+}
+#panel {
+    height: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*	background-color: rgba(140,133,104,.5);*/
+    z-index: 6;
+    border-radius: 30px;
+    opacity: .8;
+}
+/*about page*/
+ #about .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#about table {
+    border-spacing: 0px;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+}
+#about .heading {
+    background-color:rgba(0, 0, 0, 0.5);
+    text-align: right;
+    vertical-align: top;
+    width: 35%;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+}
+#about .info {
+    text-align: left;
+    width:200px;
+    padding: 20px;
+    margin-left: calc(35% + 40px);
+    font-size: 0.7em;
+}
+#about .info input {
+    padding: 0.2em;
+    min-width: 200px;
+    margin: 0.7em 0em;
+    display: block;
+}
+#about input#submit {
+    width:210px;
+    background: rgba(0, 0, 0, 0.5);
+    /*the colour of the button*/
+    padding: 8px 14px 10px;
+    /*apply some padding inside the button*/
+    border:1px solid #3e9cbf;
+    /*required or the default border for the browser will appear*/
+    cursor:pointer;
+    /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1em;
+    font-family:Oswald, sans-serif;
+    /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+    /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: #fff;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    /*give the corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+ #about input#submit:hover, input#submit:focus {
+    color:#dfe7ea;
+    background: #3e9cbf;
+    /*reduce the size of the shadow to give a pushed effect*/
+    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}

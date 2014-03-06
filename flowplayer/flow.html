@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>go.video01</title>
+<link href="../css/app.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script>
+		jQuery(document).ready(function() {
+				$('video#bgvid').on("loadedmetadata", scaleVideo);
+				$(window).on("resize", scaleVideo);
+			function scaleVideo() {
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
+				var videoNativeWidth = $('video#bgvid')[0].videoWidth;
+				var videoNativeHeight = $('video#bgvid')[0].videoHeight;
+				var vScalerW = windowWidth / videoNativeWidth;
+				var vScalerH = windowHeight / videoNativeHeight;
+				if (vScalerW > vScalerH) 
+						{var scaler = vScalerW;}
+					else
+						{var scaler = vScalerH;}
+				var newVWidth = videoNativeWidth * scaler;
+				var newVHeight = videoNativeHeight * scaler;
+					$('video#bgvid').width(newVWidth);
+					$('video#bgvid').height(newVHeight);		
+				/*	<!--alert('foiur' + newVHeight );-->*/
+			}})
+</script>
+
+</head>
+
+<body>
+
+<div id="overlay"></div>
+
+<div id="panel"><img class="cent" src="../img/perl.png" width="300" height="200" alt=""/> </div>
+
+
+<video id="bgvid" src="../video/characters.mp4" autoplay muted loop></video>
+<footer>
+<nav>
+<ul class ="nav">
+  <li><a href="../char.html">LOCAL<br>CHARACTERS</a></li>
+  <li><a href="../arch.html">BEAUTIFUL<br>ARCHITECTURE</a></li>
+  <li><a href="../home.html">GRENADA<br>COMMONS</a></li>
+  <li><a href="../out.html">UNIQUE<br>OUTDOORS</a></li>
+  <li><a href="../home.html">ABOUT<br>&amp; CONTACT</a></li>
+</ul>
+</nav>
+</footer>
+
+</body>
+</html>

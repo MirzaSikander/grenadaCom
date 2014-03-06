@@ -1,0 +1,34 @@
+body{height:100%;}
+#grid{/* wrapper element for all players */
+	height: 90px;
+	padding: 10px;
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	top: 505px;
+	background-color: rgba(52,42,32,0.80);
+	z-index: 1;
+}
+#cent{
+	position:relative;
+	margin:auto;
+	width:1000px;
+}
+
+.is-splash .fp-ui{background-position:0 -100em}
+.flowplayer{/* FROM SIZES FOR ROLLOVERS..hard-coded aspect ratio. (not working smoothly on smaller devices)  */width:179px;height:100px;position:absolute;-webkit-transition:all .5s;-moz-transition:all .5s;transition:all .5s; z-index:6; opacity:0.7;}
+.flowplayer.is-mouseover.is-splash .fp-ui{background-position:center; z-index:7;}/* position of playbutton on rollover */
+.flowplayer.is-ready, .flowplayer.is-loading{background:#333 !important;top:20px !important;left:20px !important;width:960px;height:540px;z-index:10;-webkit-box-shadow:0 0 20px #000;-moz-box-shadow:0 0 20px #000;box-shadow:0 0 20px #000; opacity:1;}/*  TO SIZES FOR ALL */
+#player0{left:120px; top:510px; background-image: url(../img/thumbs/dt.buildings1.jpg); }
+#player1{left:310px; top:510px;;background-image: url(../img/thumbs/mural.jpg); }
+#player2{left:500px; top:510px;;background-image: url(../img/thumbs/dt.buildingsdeb.jpg); }
+#player3{left:690px; top:510px;; background-image: url(../img/thumbs/gazebo.jpg); }
+
+#player4{left:215px; top:510px; background-image: url(../img/thumbs/balloons.jpg); }
+#player5{left:405px; top:510px;;background-image: url(../img/thumbs/fireworks.jpg); }
+#player6{left:595px; top:510px;;background-image: url(../img/thumbs/cotton.jpg); }
+
+#player7{left:120px; top:510px; background-image: url(../img/thumbs/biscuit.jpg); }
+#player8{left:310px; top:510px;;background-image: url(../img/thumbs/choir.jpg); }
+#player9{left:500px; top:510px;;background-image: url(../img/thumbs/band.jpg); }
+#player10{left:690px; top:510px;; background-image: url(../img/thumbs/gospel.jpg); }

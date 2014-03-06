@@ -1,0 +1,66 @@
+
+
+<!doctype html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+
+   <title>Inlay · Standalone demo · Flowplayer</title>
+
+   <!-- optimize mobile versions -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- The "minimalist" skin, "minimalist.css", "functional.css" and "playful.css" are available -->
+   <link rel="stylesheet" href="//releases.flowplayer.org/5.4.6/skin/minimalist.css">
+
+   <!-- Minimal styling for this standalone page (can be removed) -->
+   <style>
+   body {
+      font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+   }
+   #content {
+      margin: 50px auto;
+      max-width: 982px;
+   }
+      </style>
+
+   <!-- CSS for this demo -->
+   <link rel="stylesheet" href="http://flowplayer.org/media/css/demos/layout/inlay.css">
+   
+   <!-- Flowplayer depends on jquery -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+   <!-- Flowplayer-->
+   <script src="//releases.flowplayer.org/5.4.6/flowplayer.min.js"></script>
+
+   <script>
+   // configure rtmp for this demo
+   flowplayer.conf.rtmp = "rtmp://s3b78u0kbtx79q.cloudfront.net/cfx/st";
+</script>
+
+</head>
+
+<body>
+<div id="content">
+
+<div id="inlay" class="flowplayer is-splash is-closeable">
+   <video>
+   <source type="video/webm"
+           src="http://stream.flowplayer.org/coffee/640x480.webm">
+   <source type="video/mp4"
+           src="http://stream.flowplayer.org/coffee/640x480.mp4">
+   <source type="video/ogg"
+           src="http://stream.flowplayer.org/coffee/640x480.ogv">
+   <source type="video/flash"
+           src="mp4:coffee/640x480.mp4"></video>
+</div>
+
+</div><!--/end content -->
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>go.video01</title>
+    <link href="css/app5.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://releases.flowplayer.org/5.4.6/skin/minimalist.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+    <link href="css/grid5.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="flowplayer-5.4.6/flowplayer.min.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+        $('video#bgvid').on("loadedmetadata", scaleVideo);
+        $(window).on("resize", scaleVideo);
+
+        function scaleVideo() {
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            var videoNativeWidth = $('video#bgvid')[0].videoWidth;
+            var videoNativeHeight = $('video#bgvid')[0].videoHeight;
+            var vScalerW = windowWidth / videoNativeWidth;
+            var vScalerH = windowHeight / videoNativeHeight;
+            if (vScalerW > vScalerH) {
+                var scaler = vScalerW;
+            } else {
+                var scaler = vScalerH;
+            }
+            var newVWidth = videoNativeWidth * scaler;
+            var newVHeight = videoNativeHeight * scaler;
+            $('video#bgvid').width(newVWidth);
+            $('video#bgvid').height(newVHeight);
+            /*	<!--alert('foiur' + newVHeight );-->*/
+        }
+    })
+    </script>
+
+</head>
+
+<body id="about">
+
+    <!-- <div id="overlayl"></div> -->
+
+    <video id="bgvid" src="video/balloons.mp4" autoplay muted loop></video>
+    <!-- <div id="panel"><img class="cent" src="img/rem.png" width="300" height="200" alt=""/> </div> -->
+    <div class="container">
+        <table>
+            <tr>
+                <td class="heading">
+                    ABOUT
+                </td>
+                <td class="info">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="heading">
+                    CONTACT
+                </td>
+                <td class="info">
+                    <form action="contactUs.php" method="POST" accept-charset="utf-8">
+                        <input type="text" name="name" value="" placeholder="name">
+                        <input type="text" name="email" value="" placeholder="email">
+                        <input type="textarea" name="message" value="" placeholder="message" style="height:12em; vertical-align:bottom">
+                        <input type="submit" value="send" id="submit">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="heading">
+                    LOCATION
+                </td>
+                <td class="info" style="margin-bottom: 100px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106116.76212652978!2d-89.81819795000001!3d33.782655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8881ccd9ad403dff%3A0xd410602682955c93!2sGrenada%2C+MS!5e0!3m2!1sen!2sus!4v1393643905286" width="400" height="300" frameborder="0" style="border:0"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td class="heading">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <nav>
+            <ul class="nav">
+                <li><a href="char5.html">LOCAL<br>CHARACTERS</a>
+                </li>
+                <li><a href="arch5.html">BEAUTIFUL<br>ARCHITECTURE</a>
+                </li>
+                <li><a href="home5.html">GRENADA<br>COMMONS</a>
+                </li>
+                <li><a href="out5.html">UNIQUE<br>OUTDOORS</a>
+                </li>
+                <li><a href="about5.html">ABOUT<br>&amp; CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

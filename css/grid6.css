@@ -1,0 +1,143 @@
+body {
+    height:100%;
+}
+#grid {
+    /* wrapper element for all players */
+    height: 110px;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 80%;
+    top: calc(85% - 105px);
+    background-color: rgba(52, 42, 32, 0.80);
+    z-index: 5;
+    text-align:center;
+}
+#cent {
+    position:relative;
+    margin:auto;
+    width:1000px;
+}
+#container {
+    padding: 5px, 10px;
+}
+.thumbnails {
+    float:left;
+    top: calc(85% - 100px);
+}
+.thumbnailsH {
+    float:left;
+    top: calc(50% + 155px);
+    z-index: 6;
+}
+
+.is-splash .fp-ui {
+    background-position:0 -100em
+}
+.player0 {
+    background-image: url(../img/thumbs/dt.buildings1.jpg);
+    left:calc(50% - 5px - 179px - 10px - 179px);
+}
+.player1 {
+    background-image: url(../img/thumbs/mural.jpg);
+    left:calc(50% - 5px - 179px);
+}
+.player2 {
+    background-image: url(../img/thumbs/dt.buildingsdeb.jpg);
+    left:calc(50% + 5px);
+}
+.player3 {
+    background-image: url(../img/thumbs/gazebo.jpg);
+    left:calc(50% + 5px + 179px + 10px);
+}
+.player4 {
+    background-image: url(../img/thumbs/balloons.jpg);
+    left:calc(50% - 5px - 179px - 10px - 179px - 90px);
+}
+.player5 {
+    background-image: url(../img/thumbs/fireworks.jpg);
+    left:calc(50% - 5px - 179px - 90px);
+}
+.player6 {
+    background-image: url(../img/thumbs/cotton.jpg);
+    left:calc(50% + 5px - 90px);
+}
+.player7 {
+    background-image: url(../img/thumbs/pick.jpg);
+    left:calc(50% + 5px + 179px + 10px - 90px);
+}
+.player8 {
+    background-image: url(../img/thumbs/chak.jpg);
+    left:calc(50% + 5px + 179px + 20px + 179px - 90px);
+}
+.player9 {
+    background-image: url(../img/thumbs/biscuit.jpg);
+    left:calc(50% - 5px - 179px - 10px - 179px - 10px - 179px);
+}
+.player10 {
+    background-image: url(../img/thumbs/choir.jpg);
+    left:calc(50% - 5px - 179px - 10px - 179px);
+}
+.player11 {
+    background-image: url(../img/thumbs/band.jpg);
+    left:calc(50% - 5px - 179px);
+}
+.player12 {
+    background-image: url(../img/thumbs/gospel.jpg);
+    left:calc(50% + 5px);
+}
+.player13 {
+    background-image: url(../img/thumbs/bell.jpg);
+    left:calc(50% + 5px + 179px + 10px);
+}
+.player14 {
+    background-image: url(../img/thumbs/visions.jpg);
+    left:calc(50% + 5px + 179px + 10px + 179px + 10px);
+}
+/*.player15{background-image: url(../img/thumbs/gospel.jpg); left:calc(50% + 5px + 179px + 10px);} */
+ .flowplayer {
+    /* FROM SIZES FOR ROLLOVERS..hard-coded aspect ratio. (not working smoothly on smaller devices) native size is 241px x 135px */
+    width:179px;
+    height:100px;
+    position:absolute;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+    z-index:6;
+    opacity:0.9;
+}
+.flowplayer.is-mouseover.is-splash .fp-ui {
+    background-position:center;
+    z-index:7;
+}
+/* position of playbutton on rollover */
+ .flowplayer.is-ready, .flowplayer.is-loading {
+    background:#333 !important;
+    top:20px !important;
+    left:calc(50% - 480px);
+    width:960px;
+    height:540px;
+    z-index:10;
+    -webkit-box-shadow:0 0 20px #000;
+    -moz-box-shadow:0 0 20px #000;
+    box-shadow:0 0 20px #000;
+    opacity:1;
+}
+
+.text-cont {
+    position: absolute;
+    width:179px;
+    height:100px;
+    top: calc(85% - 100px);
+    background-image: none;
+    z-index: 100;
+}
+.text-overlay {
+    margin: 0.3em;
+    color: white;
+    opacity: 0;
+    top: -15px;
+    position: absolute;
+    z-index: 100;
+}
+/*  TO SIZES FOR ALL */
